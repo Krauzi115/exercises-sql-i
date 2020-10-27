@@ -38,18 +38,23 @@ SELECT * FROM albums WHERE title LIKE 'A%' ORDER BY title;
 -- Every invoice
 
 -- Every invoice ordered by total invoice amount ("total")
+SELECT * FROM invoices ORDER BY total;
 
 -- Every invoice with a total greater than 10
+SELECT * FROM invoices WHERE total > 10;
+
 
 -- The 10 least expensive invoices
 -- Remember: ORDER BY orders from lowest-to-highest by default
 SELECT * FROM invoices ORDER BY total LIMIT 10;
 
 -- The 10 most expensive invoices
-
+SELECT * FROM invoices ORDER BY total DESC LIMIT 10;
 -- The 15 most recent invoices
+SELECT * FROM invoices ORDER BY invoices DESC LIMIT 15
 
 -- The 15 oldest invoices
+SELECT * FROM invoices ORDER BY invoices ASC LIMIT 15
 
 -- The 10 most expensive invoices from the US
 
@@ -59,7 +64,7 @@ SELECT * FROM invoices ORDER BY total LIMIT 10;
 -- Hint: If "=" means equal, use "!=" to mean "not equal"
 
 -- Every invoice from Chicago, IL
-SELECT * FROM invoices WHERE billing_city = 'Chicago' AND billing_state = 'IL' AND billing_country='USA';
+SELECT * FROM invoices WHERE billing_city = Chicago AND billing_state = IL AND billing_country=usa;
 
 -- A list of all the invoices worth more than $5.00 from Chicago, IL
 
