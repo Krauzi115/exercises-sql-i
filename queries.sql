@@ -109,7 +109,7 @@ GROUP BY billing_country
 ORDER BY gross_sales DESC
 LIMIT 5;
 -- A list of the top 5 countries by average invoice size
-SELECT billing_country, AVG(total) AS avg_invoice_size
+SELECT billing_country, AVG(total) AS average_invoice_size
 FROM invoices
 GROUP BY billing_country
 ORDER BY avg_invoice_size DESC
